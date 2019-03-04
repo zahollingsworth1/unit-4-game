@@ -1,0 +1,16 @@
+.swirlsize{
+    height: 200px;
+    width: 200px;
+}
+body {
+    font-family: 'Atomic Age', cursive;
+    color: black;
+}
+.black{
+    display: inline;
+    background-color: black;
+}
+.btn:hover {
+    background-color: black;
+    color: white;
+  }
