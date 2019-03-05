@@ -6,15 +6,17 @@ $(document).ready(function() {
     var swirl4Num;
     var yourScore = 0;
 	var wins = 0;
-	var losses = 0;
+    var losses = 0;
+    
+    $('.dropdown-toggle').dropdown()
     
 //RANDOM NUMBER CALL
 	function newNumbers() {
 		totalNumber = Math.floor(Math.random() * 100) + 20;
-		swirl1Num = Math.ceil(Math.random() * 14);
-		swirl2Num = Math.ceil(Math.random() * 14);
-		swirl3Num = Math.ceil(Math.random() * 14);
-        swirl4Num = Math.ceil(Math.random() * 14);
+		swirl1Num = Math.floor(Math.random() * 13 +1);
+		swirl2Num = Math.floor(Math.random() * 13 +1);
+		swirl3Num = Math.floor(Math.random() * 13 +1);
+        swirl4Num = Math.floor(Math.random() * 13 +1);
         
         console.log(totalNumber, swirl1Num, swirl2Num, swirl3Num, swirl4Num)
 	}
@@ -36,23 +38,32 @@ $(document).ready(function() {
 		console.log(totalNumber, swirl1Num, swirl2Num, swirl3Num, swirl4Num)
 	}
 //winner winner
-	function youWin() {   
+	function win() {   
         $("#winOrLose").text("YOU WIN! PRESS NEW GAME TO PLAY AGAIN");
 		wins++;
         $("#wins").text(wins);       
 	}
 //lose function
-	function youLose() {   
+	function lose() {   
         $("#winOrLose").text("YOU LOSE. PRESS NEW GAME TO PLAY AGAIN");
 		losses++;
         $("#losses").text(losses);       
 	}
 
-    //begining/refresh start
+//begining/refresh start
     newGame();
     
 //hover on and off function   
     $(".swirlImg").hover(
+        function() {
+		    $(this).css({opacity: 0.5});
+	        },
+	    function() {
+            $(this).css({opacity: 1});
+        }
+    );
+
+    $(".colordrop").hover(
         function() {
 		    $(this).css({opacity: 0.5});
 	        },
@@ -81,9 +92,9 @@ $(document).ready(function() {
 		$("#yourScore").text(yourScore);
 
 		if (yourScore === totalNumber) {
-			youWin();
+			win();
 		} else if (yourScore > totalNumber) {
-			youLose();
+			lose();
 		}
 	});
 

@@ -4,7 +4,7 @@
 }
 body {
     font-family: 'Atomic Age', cursive;
-    color: black;
+    color: black !important; 
 }
 .black{
     display: inline;
@@ -14,3 +14,16 @@ body {
     background-color: black;
     color: white;
   }
+.colordrop:hover {
+    color: white;
+}
+.dropdown-menu {
+    width: 700px !important;
+}
+.instru{
+    background-color: rgba(145, 96, 17);
+    color: black; 
+}
+.colordrop{
+    color: black !important; 
+}

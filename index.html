@@ -1,71 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/javascript/game.js"></script>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <style>
         body {
-         background-image: url("assets/images/abby-bg3.jpg");
-            }
+            background-image: url("assets/images/abby-bg3.jpg");
+        }
     </style>
     <link href="https://fonts.googleapis.com/css?family=Atomic+Age" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="assets/images/swirl5.png">
     <title>SWIRLS</title>
 </head>
+
 <body>
+    <ul class="nav nav-pills">
+
+        <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle colordrop" data-toggle="dropdown" href="#" role="button"
+                aria-haspopup="true" aria-expanded="false">Instructions</a>
+            <div class="dropdown-menu instru border-dark p-2">
+                <p>You will be given a number at the start of the game. <br><br>
+                    There are four swirls below. By clicking on a swirl you will add a specific amount of points to
+                    your total score.<br><br>
+                    You will win the game by matching your total score to the random number. You lose the game if your
+                    total score goes above the random number. <br><br>
+                    The value of each swirl is hidden from you until you click on it. <br><br>
+                    Each time when the game starts, the game will change the values of each swirl.<br><br>
+                    Good Luck!</p>
+            </div>
+        </li>
+    </ul>
     <div class="header text-center mt-5">
-		<h1>THE SWIRL SITUATION</h1>
-		<h3>TOTAL NUMBER:</h3>
+        <h1>THE SWIRL SITUATION</h1>
+        <h3>TOTAL NUMBER:</h3>
         <h1 id="totalNumber"></h1>
         <h3 class="text-light black" id="winOrLose"></h3>
-	</div>
-	
-	<div class="container">
-		
-		<div class="row">
-			<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
-				<img class="swirlImg img-responsive swirlsize" id="swirl1" src="assets/images/swirl3.png" alt="swirl 1"/>
-			</div>
-			<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
-				<img class="swirlImg img-responsive swirlsize" id= "swirl2" src="assets/images/swirl2.png" alt="swirl 2"/>
-			</div>
-			<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
-				<img class="swirlImg img-responsive swirlsize" id="swirl3" src="assets/images/swirl1.png" alt="swirl 3"/>
-			</div>
-			<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
-				<img class="swirlImg img-responsive swirlsize" id="swirl4" src="assets/images/swirl4.png" alt="swirl 4"/>
-			</div>
-		</div>
+    </div>
 
-		
+    <div class="container">
 
-		<div class="row text-center">
-			<div class="col-lg-6 total">
-				<h3>YOUR SCORE:</h3>
-				<h2 id="yourScore"></h2>
-			</div>
-			<div class="col-lg-6 scores">
-				<p class="score">WINS: <span id="wins"></span></p> 
-				<p class="score">LOSSES: <span id="losses"></span></p>
-			</div>
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
+                <img class="swirlImg img-responsive swirlsize" id="swirl1" src="assets/images/swirl3.png"
+                    alt="swirl 1" />
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
+                <img class="swirlImg img-responsive swirlsize" id="swirl2" src="assets/images/swirl2.png"
+                    alt="swirl 2" />
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
+                <img class="swirlImg img-responsive swirlsize" id="swirl3" src="assets/images/swirl1.png"
+                    alt="swirl 3" />
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
+                <img class="swirlImg img-responsive swirlsize" id="swirl4" src="assets/images/swirl4.png"
+                    alt="swirl 4" />
+            </div>
         </div>
-        
-        <div class="row mt-3 mb-4">
-			<div class="col-lg-12 directions text-center">
-				<p>You will be given a number at the start of the game. Click on a swirl above to add points to your score. You win the game by matching your score to the given number. You lose if your score goes above the number. The value of each swirl is hidden until you click it. Each time a new game starts, the value of the swirls will change. Good luck!</p>
-			</div>
-        </div>
+
+
+
         <div class="row text-center">
-            <div class="col-lg-12 button">				
-				<button type="button" class="btn  btn-lg">NEW GAME</button>
-			</div>
+            <div class="col-lg-6 total">
+                <h3>YOUR SCORE:</h3>
+                <h2 id="yourScore"></h2>
+            </div>
+            <div class="col-lg-6 scores">
+                <p class="score">WINS: <span id="wins"></span></p>
+                <p class="score">LOSSES: <span id="losses"></span></p>
+            </div>
         </div>
-	</div>
+
+
+        <div class="row text-center">
+            <div class="col-lg-12 button">
+                <button type="button" class="btn  btn-lg">NEW GAME</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
